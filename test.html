@@ -1,0 +1,88 @@
+
+<html>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1 viewport-fit=cover, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <style>
+      body {
+        background-color: white;
+        margin: 0 auto;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
+      #bp-web-widget-container {
+        max-height: 90%;
+        width: 481px;
+        margin: 0 auto;
+        flex-grow: 1;
+      }
+      #bp-web-widget-container div {
+        height: 100%;
+      }
+      .webchatIframe {
+        position: relative !important;
+      }
+      @media screen and (max-device-width: 767px) {
+  .bpw-layout {
+    width: 100% !important;
+    height: 90%;
+    right: 0;
+    bottom: 0;
+    border-radius: 0;
+  }
+ 
+  .bp-widget-side {
+    margin-top: -18px;
+}
+}
+@media screen and (max-device-width: 485px) {
+  .bp-widget-side {
+    /* margin-top: 0; */
+}
+#bp-web-widget-container{
+    overflow-x: hidden !important;
+    width: 100%;
+  }
+}
+    </style>
+    <title>Hello World</title>
+  </head>
+  <body>
+
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script>
+  window.botpressWebChat.init({
+      "composerPlaceholder": "Chat with me!!",
+      "botConversationDescription": "This is a super fast bot",
+      "botId": "b4c62086-a9ed-4589-ba6f-f2209902ebf6",
+      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+      "messagingUrl": "https://messaging.botpress.cloud",
+      "clientId": "b4c62086-a9ed-4589-ba6f-f2209902ebf6",
+      "webhookId": "30b7be51-b070-493a-8cd9-3ec0fb675b83",
+      "lazySocket": true,
+      "themeName": "prism",
+      "botName": "Hello World",
+      "avatarUrl": "https://storage.googleapis.com/msgsndr/Uqw9oDeOg9XTaCznA8UR/media/65a4e5d728a68b49bcb38937.png",
+      "stylesheet": "https://webchat-styler-css.botpress.app/prod/code/f52abad0-e0e4-4171-9cd4-5456565a26eb/v65457/style.css",
+      "frontendVersion": "v1",
+      "useSessionStorage": true,
+      "enableConversationDeletion": true,
+      "theme": "prism",
+      "themeColor": "#2563eb",
+      "hideWidget": true,
+      "disableAnimations": true,
+      "closeOnEscape": false,
+      "showConversationsButton": false,
+      "enableTranscriptDownload": false,
+      "className": "webchatIframe",
+      "containerWidth": "100%25",
+      "layoutWidth": "100%25",
+      "showCloseButton": true
+  });
+window.botpressWebChat.onEvent(function () { window.botpressWebChat.sendEvent({ type: 'show' }) }, ['LIFECYCLE.LOADED']);
+</script>
+
+  </body>
+</html>
